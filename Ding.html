@@ -1,6 +1,5 @@
 <html>
   <body>
-    <a id="link" href="langningchen.github.io/Ding.apk"></a>
     <script>
       var xhr = new XMLHttpRequest();
       xhr.open('GET', './DingCheckVersion.html', true);
@@ -9,11 +8,12 @@
           var Data = "点击我下载" + this.responseText.substr(0, this.responseText.length - 1) + "版本响铃";
           var a = document.createElement("a");
           a.innerHTML = Data;
+          a.href = "./Ding.apk";
           a.style.fontSize = String((window.innerWidth - 10) / Data.length / 2) + "px";
           document.body.appendChild(a);
         }
       };
       xhr.send();
-    </sciprt>
+    </script>
   </body>
 </html>
